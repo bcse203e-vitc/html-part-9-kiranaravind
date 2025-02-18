@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="index1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#booking">Book Appointment</a></li>
+                <li><a href="#appointments">View Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Book Your Appointment Easily</h1>
+        <p>Choose from a variety of services and schedule your appointment in a few clicks.</p>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <button class="service-btn" data-service="Doctor Consultation">Doctor Consultation</button>
+            <button class="service-btn" data-service="Salon Booking">Salon Booking</button>
+            <button class="service-btn" data-service="Car Service">Car Service</button>
+        </div>
+    </section>
+
+    <section id="booking" class="form-container">
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number (10 digits)" required>
+            <select id="service" required>
+                <option value="">Select Service</option>
+                <option value="Doctor Consultation">Doctor Consultation</option>
+                <option value="Salon Booking">Salon Booking</option>
+                <option value="Car Service">Car Service</option>
+            </select>
+            <input type="datetime-local" id="datetime" required>
+            <textarea id="requests" placeholder="Special Requests (Optional)"></textarea>
+            <label><input type="checkbox" id="terms" required> Agree to Terms</label>
+            <button type="submit" class="btn">Book Appointment</button>
+        </form>
+    </section>
+
+    <section id="appointments" class="appointments-container">
+        <h2>Booked Appointments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Service</th>
+                    <th>Date & Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="appointments-list"></tbody>
+        </table>
+    </section>
+
+    <script src="index1.js"></script>
+</body>
+</html>
